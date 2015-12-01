@@ -31,6 +31,13 @@ module.exports = function(grunt){
                 ],
                 "dest": 'server/public/vendors/angular'
             },
+            angularAnimate: {
+                expand: true,
+                cwd: 'node modules/angular-animate',
+                src: [
+                    "angular-route/angular-animate.min.js",
+                    "angular-route/angular-animate.min.js.map"
+                ],
             angularRoute: {
                 expand: true,
                 cwd: 'node modules/angular-route',
@@ -38,6 +45,8 @@ module.exports = function(grunt){
                     "angular-route/angular-route.min.js",
                     "angular-route/angular-route.min.js.map"
                 ],
+                "dest": 'server/public/vendors/angular-route'
+            },
                 "dest": 'server/public/vendors/angular-route'
             },
             bootstrap: {
@@ -64,6 +73,7 @@ module.exports = function(grunt){
                     "current.html",
                     "home.html",
                     "mailing.html"
+
                 ],
                 "dest": "server/public/assets/views/routes/"
             },
@@ -73,7 +83,9 @@ module.exports = function(grunt){
                 src: [
                     "header.html",
                     "main_nav.html",
-                    "footer.html"
+                    "footer.html",
+                    "archive_nav.html",
+                    "current_nav.html"
                 ],
                 "dest": "server/public/assets/views/templates/"
             },

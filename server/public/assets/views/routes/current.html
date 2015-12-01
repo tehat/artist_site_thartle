@@ -1,6 +1,17 @@
-
-
-
 <div>
+    <div ng-include="'/assets/views/templates/current_nav.html'"></div>
     <h1>Current</h1>
+
+    <div class="well" ng-repeat="currentwork in currentCollection">
+        <div>
+            {{currentwork.image_url}}
+        </div>
+        <h3>{{currentwork.title}}</h3>
+        <p>
+            {{currentwork.date_completed}}<br/>
+            {{currentwork.materials}}</br>
+            {{currentwork.dimensions}}
+        </p>
+
+    </div>
 </div>

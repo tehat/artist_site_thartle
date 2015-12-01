@@ -13,6 +13,7 @@
 
 
     <script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate/angular-animate.min."></script>
     <script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
 
     <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
@@ -22,19 +23,11 @@
 </head>
 <body>
 
+    <header ng-include="'/assets/views/templates/header.html'"></header>
 
-    <div ng-include="'/assets/views/templates/header.html'"></div>
+    <main ng-view></main>
 
-    <main ng-view>
-        <div typeof="'/assets/views/routes/home.html'"></div>
-        <div typeof="'/assets/views/routes/current.html'"></div>
-        <div typeof="'/assets/views/routes/archive.html'"></div>
-        <div typeof="'/assets/views/routes/mailing.html'"></div>
-        <div typeof="'/assets/views/routes/contact.html'"></div>
-    </main>
-
-    <div ng-include="'/assets/views/templates/footer.html'"></div>
-
+    <footer ng-include="'/assets/views/templates/footer.html'"></footer>
 
 </body>
 </html>

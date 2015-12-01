@@ -7,8 +7,8 @@ var path = require('path');
 var pg = require('pg');
 
 
-router.get('/home', function(req, res){
-    var file = req.params[0] || 'assets/views/index.html';
+router.get('/', function(req, res){
+    var file = req.params[0] || 'assets/views/home.html';
     res.sendFile(path.join(__dirname, "../public/", file));
 });
 

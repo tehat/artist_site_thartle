@@ -1,56 +1,19 @@
-
-
-
 <div>
+    <div ng-include="'/assets/views/templates/archive_nav.html'"></div>
     <h1>Archive</h1>
 
+    <div class="well" ng-repeat="artwork in artCollection">
+        <div>
+            {{artwork.image_url}}
+        </div>
+        <h3>{{artwork.title}}</h3>
+        <p>
+            {{artwork.date_completed}}<br/>
+            {{artwork.materials}}</br>
+            {{artwork.dimensions}}
+        </p>
 
-    <!--<head>-->
-        <!--<style>-->
-            <!--div {background-color: green;}-->
-            <!--div a {-->
-                <!--text-decoration: none;-->
-                <!--color: white;-->
-                <!--font-size: 20px;-->
-                <!--padding: 15px;-->
-                <!--display:inline-block;-->
-            <!--}-->
-            <!--ul {-->
-                <!--display: inline;-->
-                <!--margin: 0;-->
-                <!--padding: 0;-->
-            <!--}-->
-            <!--ul li {display: inline-block;}-->
-            <!--ul li:hover {background: #555;}-->
-            <!--ul li:hover ul {display: block;}-->
-            <!--ul li ul {-->
-                <!--position: absolute;-->
-                <!--width: 200px;-->
-                <!--display: none;-->
-            <!--}-->
-            <!--ul li ul li {-->
-                <!--background: #555;-->
-                <!--display: block;-->
-            <!--}-->
-            <!--ul li ul li a {display:block !important;}-->
-            <!--ul li ul li:hover {background: #666;}-->
-        <!--</style>-->
-    <!--</head>-->
-    <!--<body>-->
-
-    <!--<div>-->
-        <!--<a href="#">Useless Link</a>-->
-        <!--<ul>-->
-            <!--<li>-->
-                <!--<a href="#">Art work and details</a>-->
-                <!--<ul>-->
-                    <!--<li><a href="#">Link 1</a></li>-->
-                    <!--<li><a href="#">Link 2</a></li>-->
-                    <!--<li><a href="#">Link 3</a></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-
-    <!--</body>-->
+    </div>
 </div>
+
+

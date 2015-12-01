@@ -5,10 +5,6 @@
 myApp.controller("MailingController", ['$scope','$http', function($scope, $http){
     console.log("Mailing Controller");
 
-    $scope.isActive = function (viewLocation) {
-        return viewLocation === $location.url('mailing');
-    };
-
 
     $scope.person = {};
     $scope.mailingList = [];

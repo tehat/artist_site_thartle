@@ -1,36 +1,42 @@
 /**
  * Created by Thomas on 11/24/15.
  */
-myApp.controller('ArchiveController', ['$scope','$location', function($scope, $location){
+myApp.controller("ArchiveController", ['$scope','$http', function($scope, $http ){
+    console.log("ArchiveController");
 
-    $scope.isActive = function (viewLocation) {
-        return viewLocation === $location.url('/archive');
+    $scope.artwork = {};
+    $scope.artCollection = [];
+
+    //GET artwork
+    $scope.getArt = function(){
+        console.log("is this working 3?");
+
+        $http.get('/archive').then(function(response) {
+
+            for(var i = 0; i < $scope.artCollection.length; i++){
+                var artwork = $scope.artCollection[i];
+                $scope.artwork = response.data;
+                console.log(artwork);
+            }
+
+        });
     };
 
+    $scope.getArt();
 
 }]);
 
 
+//{
+//    title: $scope.selectedArtwork.title,
+//    date_completed: $scope.selectedArtwork.date_completed,
+//    materials: $scope.selectedArtwork.materials,
+//    dimensions: $scope.selectedArtwork.dimensions,
+//    artwork_url: $scope.selectedArtwork.artwork_url
+//}
 
 
-//myApp.controller("IndexController", ['scope','http', function($scope, $http ){
-//    console.log("Boom IndexControler");
-//
-//$scope.artpiece = {};
-//$scope.artcollection = [];
-//
-//var fetchArtPiece = function(){
-//    return $http.get('/artcollection').then(function(response){
-//        if(response.status !==200){
-//            throw new Error('Failed to fetch artcollection from API');
-//        }
-//        $scope.artpiece = {};
-//        $scope.artcollection = response.data;
-//        return response.data;
-//    })
-//};
-//$scope.add = function(artpiece){
-//    return $http.post('add', artpiece).then(fetchArtPiece);
-//};
-//$scope.fetchArtPiece();
-//}]);
+
+
+
+

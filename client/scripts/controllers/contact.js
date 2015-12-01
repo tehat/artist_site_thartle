@@ -3,9 +3,11 @@
  */
 myApp.controller('ContactController', ['$scope', function($scope){
 
-    $scope.isActive = function (viewLocation) {
-        return viewLocation === $location.url('/contact');
-    };
+    console.log("Contact Controller");
+    $scope.thing = "Contact Page";
+    //$scope.isActive = function (viewLocation) {
+    //    return viewLocation === $location.url('/contact');
+    //};
 
 
 }]);

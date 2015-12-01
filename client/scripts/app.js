@@ -3,10 +3,12 @@
  */
 var myApp = angular.module('myApp', ['ngRoute']);
 
+console.log("route provider function");
 
 
 
-myApp.config(['$routeProvider', function($routeProvider, $locationProvider){
+
+myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.
 
     when('/home', {

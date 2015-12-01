@@ -3,12 +3,8 @@
  */
 var express = require('express');
 var router = express.Router();
-
 var path = require('path');
-//var bodyParser = require('body-parser');
-//
-//var pg = require('pg');
-//var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/artist_site_thartle';
+
 
 var home = require('./home');
 var current = require('./current');
