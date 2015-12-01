@@ -13,15 +13,15 @@ myApp.controller("ArchiveController", ['$scope','$http', function($scope, $http 
 
         $http.get('/archive').then(function(response) {
 
-            for(var i = 0; i < $scope.artCollection.length; i++){
-                var artwork = $scope.artCollection[i];
-                $scope.artwork = response.data;
-                console.log(artwork);
-            }
+            //for(var i = 0; i < $scope.artCollection.length; i++){
+            //    var artwork = $scope.artCollection[i];
+            $scope.artCollection.push(response.data[0]);
+            console.log( $scope.artCollection);
+                console.log(response.data);
+            //}
 
         });
     };
-
     $scope.getArt();
 
 }]);

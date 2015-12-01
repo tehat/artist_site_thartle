@@ -11,15 +11,15 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
 //Get artwork info and image url
 router.get('/', function(req,res){
     var results = [];
-    console.log(req);
-    var artworkID = req.query.artworkID;
+    console.log(req.query);
+    var artworkID = 4;
     console.log("Boom test 1", results);
-
+    console.log(artworkID);
     //SQL Query > SELECT data from table
     pg.connect(connectionString, function(err, artwork){
-        var query = artwork.query("SELECT title, date_completed, materials, dimensions, image_url" +
+        var query = artwork.query("SELECT title, date_completed, materials, dimensions, image_url " +
                 "FROM artwork WHERE artwork_id = $1", [artworkID]);
-
+                console.log(query);
         // Stream results back one row at a time, push into results array
         query.on('row', function(row){
             results.push(row);

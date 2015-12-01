@@ -18,9 +18,9 @@ router.get('/', function(req,res){
 
 
     //SQL Query > SELECT data from table
-    pg.connect(connectionString, function(err, artwork){
+    pg.connect(connectionString, function(err, currentwork){
         var query = currentwork.query("SELECT title, date_completed, materials, dimensions, image_url" +
-            "FROM artwork WHERE currentwork_id = $1", [artworkID]);
+            "FROM currentwork WHERE currentwork_id = $1", [artworkID]);
 
         // Stream results back one row at a time, push into results array
         query.on('row', function(row){
@@ -44,6 +44,5 @@ router.get('/', function(req,res){
         }
     });
 });
-
 
 module.exports = router;
