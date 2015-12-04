@@ -6,14 +6,11 @@ myApp.controller("MailingController", ['$scope','$http', function($scope, $http)
     console.log("Mailing Controller");
 
 
-    $scope.person = {};
-    $scope.mailingList = [];
 
+    //POST send object with  entered mailing list info
+    $scope.clickButton = function(request){
 
-    //POST
-    $scope.clickButton = function(request,response){
-
-        $http.post('/mailing', request).then(function(response){
+        $http.post('/mailing', request).then(function(){
             console.log("button click",request.body);
         });
         $scope.form = {};

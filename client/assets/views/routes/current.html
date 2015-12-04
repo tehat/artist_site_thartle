@@ -3,13 +3,12 @@
     <h1>Current</h1>
 
     <div class="well" ng-repeat="currentwork in currentCollection">
-        <div>
-            {{currentwork.image_url}}
-        </div>
-        <h3>{{currentwork.title}}</h3>
+
+        <img ng-src="{{currentwork.image_url}}">
         <p>
+            {{currentwork.title}}<br/>
             {{currentwork.date_completed}}<br/>
-            {{currentwork.materials}}</br>
+            {{currentwork.materials}}<br/>
             {{currentwork.dimensions}}
         </p>
 

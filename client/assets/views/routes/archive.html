@@ -3,13 +3,12 @@
     <h1>Archive</h1>
 
     <div class="well" ng-repeat="artwork in artCollection">
+
         <img ng-src="{{artwork.image_url}}">
-
-
-        <h3>{{artwork.title}}</h3>
         <p>
+            {{artwork.title}}<br/>
             {{artwork.date_completed}}<br/>
-            {{artwork.materials}}</br>
+            {{artwork.materials}}<br/>
             {{artwork.dimensions}}
         </p>
 

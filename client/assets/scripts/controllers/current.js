@@ -1,27 +1,39 @@
 /**
  * Created by Thomas on 11/24/15.
  */
-myApp.controller("CurrentController", ['$scope','$http', function($scope, $http ){
+myApp.controller("CurrentController", ['$scope','$http', function($scope, $http, $log ){
     console.log("CurrentController");
 
     $scope.currentwork = {};
     $scope.currentCollection = [];
 
-    //GET artwork
-    $scope.getArt = function(){
-        console.log("is this working Current?");
 
-        $http.get('/current').then(function(response) {
+    //GET  display artwork on DOM
+    $scope.getArt = function(request){
 
-            for(var i = 0; i < $scope.currentCollection.length; i++){
-                var currentwork = $scope.currentCollection[i];
-                $scope.currentwork = response.data;
-                console.log(currentwork);
-            }
-
+        console.log("is this working Current?");      // add var id to the get ajax call
+         $http({
+             url: '/current',
+             method: "GET",
+             params: {
+                 id: request
+             }
+         }).then(function(response) {
+            $scope.currentwork = response.data;
+             console.log($scope.currentwork);
+            $scope.currentCollection.response.data;
+                console.log($scope.currentCollection);
+                console.log(reponse.data);
         });
     };
 
-    $scope.getArt();
-
 }]);
+
+
+
+
+//title: $scope.currentwork.title,
+//date_completed: $scope.currentwork.date_completed,
+//materials: $scope.currentwork.materials,
+//dimensions: $scope.currentwork.dimensions,
+//image_url: $scope.currentwork.image_url

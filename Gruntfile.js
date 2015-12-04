@@ -21,7 +21,7 @@ module.exports = function(grunt){
         copy: {
             angular: {
                 expand: true,
-                cwd: 'node modules/angular/',
+                cwd: 'node_modules/angular/',
                 src: [
                     'angular.min.js',
                     'angular.min.js.map',
@@ -31,25 +31,52 @@ module.exports = function(grunt){
             },
             angularAnimate: {
                 expand: true,
-                cwd: 'node modules/angular-animate/',
+                cwd: 'node_modules/angular-animate/',
                 src: [
                     "angular-animate.min.js",
                     "angular-animate.min.js.map"
                 ],
                 "dest": 'server/public/vendors/angular-animate/'
             },
+            angularAria: {
+                expand: true,
+                cwd: 'node_modules/angular-aria/',
+                src: [
+                    'angular-aria.min.js',
+                    'angular-aria.min.js.map'
+                ],
+                "dest": 'server/public/vendors/angular-aria/'
+            },
+            angularMessages: {
+                expand: true,
+                cwd: 'node_modules/angular-messages/',
+                src: [
+                    'angular-messages.min.js',
+                    'angular-messages.min.js.map'
+                ],
+                "dest": 'server/public/vendors/angular-messages/'
+            },
             angularRoute: {
                 expand: true,
-                cwd: 'node modules/angular-route/',
+                cwd: 'node_modules/angular-route/',
                 src: [
                     "angular-route.min.js",
                     "angular-route.min.js.map"
                 ],
                 "dest": 'server/public/vendors/angular-route/'
+
+            },
+            angularBootstrap: {
+                expand: true,
+                    cwd: 'node_modules/angular-bootstrap/',
+                 src: [
+                    "ui-bootstrap.min.js"
+                 ],
+                "dest": 'server/public/vendors/ui-bootstrap/'
             },
             bootstrap: {
                 expand: true,
-                cwd: 'node modules/bootstrap/',
+                cwd: 'node_modules/bootstrap/dist/css/',
                 src: [
                     "bootstrap.min.css",
                     "bootstrap.min.css.map"
@@ -71,7 +98,6 @@ module.exports = function(grunt){
                     "current.html",
                     "home.html",
                     "mailing.html"
-
                 ],
                 "dest": "server/public/assets/views/routes/"
             },

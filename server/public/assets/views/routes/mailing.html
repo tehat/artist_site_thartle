@@ -1,17 +1,82 @@
+<!--<div layout="column" ng-cloak>-->
+    <!--<md-content layout-padding>-->
+        <!--<form name="mailingList">-->
+            <!--<md-input-container class="md-block ">-->
+                <!--<label>First Name</label>-->
+                <!--<input md-maxlength="30" required name="First Name" ng-model="form.first_name">-->
+                <!--<div ng-messages="mailingList.first_name.$error">-->
+                    <!--<div ng-message="required">Required.</div>-->
+                <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+                <!--<label>Last Name</label>-->
+                <!--<input md-maxlength="30" required name="Last Name" ng-model="form.last_name">-->
+                <!--<div ng-messages="mailingList.last_name.$error">-->
+                    <!--<div ng-message="required">Required.</div>-->
+                <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+                <!--<label>Street</label>-->
+                <!--<input md-maxlength="30" required name="Street" ng-model="form.address_street">-->
+                <!--<div ng-messages="mailingList.address_street.$error">-->
+                    <!--<div ng-message="required">Required.</div>-->
+                <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+            <!--<label>City</label>-->
+            <!--<input md-maxlength="30" required name="City" ng-model="form.address_city">-->
+            <!--<div ng-messages="mailingList.address_city.$error">-->
+                <!--<div ng-message="required">Required.</div>-->
+            <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+            <!--<label>State</label>-->
+            <!--<input md-maxlength="30" required name="State" ng-model="form.address_state">-->
+            <!--<div ng-messages="mailingList.address_state.$error">-->
+                <!--<div ng-message="required">Required.</div>-->
+            <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+            <!--<label>Zip Code</label>-->
+            <!--<input md-maxlength="30" required name="Zip Code" ng-model="form.address_zip">-->
+            <!--<div ng-messages="mailingList.address_zip.$error">-->
+                <!--<div ng-message="required">Required.</div>-->
+            <!--</div>-->
+            <!--</md-input-container>-->
+            <!--<md-input-container class="md-block">-->
+                <!--<label>email</label>-->
+                <!--<input required type="email" name="email" ng-model="form.email"-->
+                       <!--minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />-->
+                <!--<div ng-messages="mailingList.email.$error" role="alert">-->
+                    <!--<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">-->
+                        <!--Your email must be between 10 and 100 characters long and look like an e-mail address.-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</md-input-container>-->
+
+            <!--<md-input-container class="md-block">-->
+                <!--<label>Submit</label>-->
+                <!--<button type="button" ng-click="submit(form)"></button>-->
+            <!--</md-input-container>-->
+
+            <!--&lt;!&ndash;<button aria-label="Close" onclick="myDialog.close()">X</button>&ndash;&gt;-->
+        <!--</form>-->
+    <!--</md-content>-->
+
+<!--</div>-->
 
 
-
-    <div class="container">
-        <h4>Mailing List</h4>
-        <form>
-            <input ng-model="form.first_name" type="text" class="well" placeholder="First Name"><br/>
-            <input ng-model="form.last_name" type="text" class="well" placeholder="Last Name"><br/>
-            <input ng-model="form.address_street" type="text" class="well" placeholder="Street"><br/>
-            <input ng-model="form.address_city" type="text" class="well" placeholder="City"><br/>
-            <input ng-model="form.address_state" type="text" class="well" placeholder="State"><br/>
-            <input ng-model="form.address_zip" type="text" class="well"  placeholder="Zip Code"><br/>
-            <input ng-model="form.email" type="text" class="well"  placeholder="email"><br/>
-            <button ng-click="clickButton(form)" type="submit" class="btn btn-submit">Submit Message</button>
-        </form>
-    </div>
+<div class="container">
+    <h4>Mailing List</h4>
+    <form>
+        <input ng-model="form.first_name" type="text" class="well" placeholder="First Name"><br/>
+        <input ng-model="form.last_name" type="text" class="well" placeholder="Last Name"><br/>
+        <input ng-model="form.address_street" type="text" class="well" placeholder="Street"><br/>
+        <input ng-model="form.address_city" type="text" class="well" placeholder="City"><br/>
+        <input ng-model="form.address_state" type="text" class="well" placeholder="State"><br/>
+        <input ng-model="form.address_zip" type="text" class="well"  placeholder="Zip Code"><br/>
+        <input ng-model="form.email" type="text" class="well"  placeholder="email"><br/>
+        <button ng-click="clickButton(form)" type="submit" class="btn btn-submit">Submit Message</button>
+    </form>
+</div>
 
