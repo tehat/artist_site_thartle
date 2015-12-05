@@ -57,5 +57,5 @@ var pg = require('pg');
 //});
 //
 //
-//module.exports = router;
+module.exports = router;
 

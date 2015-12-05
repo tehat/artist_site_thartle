@@ -1,40 +1,11 @@
-<div ng-controller="DropdownCtrl">
-    <div class="btn-group" uib-dropdown>
-        <button id="button-template-url" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
-            Dropdown using template <span class="caret"></span>
-        </button>
-        <ul class="uib-dropdown-menu" template-url="dropdown.html" aria-labelledby="button-template-url">
-        </ul>
-    </div>
+<ul class="nav nav-pill nav-justified">
+    <li><a href="#1">Low Three Drawer Dresser</a></li>
+    <li><a href="#2">Low Six Drawer Dresser</a></li>
+    <li><a href="#3">High Six Drawer Dresser</a></li>
+    <li><a href="#4">Mahogany Side Board</a></li>
+    <li><a href="#5">Face Nailed Coffee Table</a></li>
+</ul>
 
-    <div class="btn-group" uib-dropdown uib-keyboard-nav>
-        <script type="text/ng-template" id="dropdown.html">
-            <ul class="uib-dropdown-menu" role="menu" aria-labelledby="button-template-url">
-                <li role="menuitem"><a href="#">Action in Template</a></li>
-                <li role="menuitem"><a href="#">Another action in Template</a></li>
-                <li role="menuitem"><a href="#">Something else here</a></li>
-                <li role="menuitem"><a href="#">Separated link in Template</a></li>
-            </ul>
-        </script>
-    </div>
+<div ng-repeat="artwork in artCollection" value="{{artwork_id.id}}">
+    {{artwork.title}}
 </div>
-
-
-
-
-
-
-<!--<ul class="dropdown nav nav-pill nav-justified" ng-controller="CurrentController">-->
-<!--<span uib-dropdown on toggle="(open)">-->
-<!--<li><a href id="simple-dropdown" uib-dropdown-toggle>-->
-<!--Featured Furniture-->
-<!--</a></li>-->
-<!--<ul class="uib-dropdown-menu" aria-labelledby="simple-dropdown">-->
-<!--<li><a ng-click="getArt(1)">Low Three Drawer Dresser</a></li>-->
-<!--<li><a ng-click="getArt(2)">Low Six Drawer Dresser</a></li>-->
-<!--<li><a ng-click="getArt(3)">High Six Drawer Dresser</a></li>-->
-<!--<li><a ng-click="getArt(4)">Mahogany Entertainment Side Table</a></li>-->
-<!--</ul>-->
-<!--<li><a href id="simple-dropdown" uib-drpdown-toggle="simpledropdown"></a></li>-->
-<!--</span>-->
-<!--</ul>-->

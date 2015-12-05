@@ -1,9 +1,8 @@
 /**
  * Created by Thomas on 12/3/15.
  */
-var myApp = angular.module('myApp',['ui.bootstrap']);
-
-myApp.controller('DropdownController', function ($scope, $log) {
+//myApp.controller("CurrentController", ['$scope','$http', function($scope, $http){
+myApp.controller('DropdownCtrl', ['$scope', '$log', function ($scope, $log) {
     $scope.items = [
         '# First Image',
         '# Second Image',
@@ -23,4 +22,4 @@ myApp.controller('DropdownController', function ($scope, $log) {
         $event.stopPropagation();
         $scope.status.isopen = !$scope.status.isopen;
     };
-});
+}]);

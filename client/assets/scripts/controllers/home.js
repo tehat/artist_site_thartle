@@ -3,6 +3,5 @@
  */
 myApp.controller('HomeController', ['$scope', function($scopes){
     console.log("Home Controller");
-
 }]);
 
