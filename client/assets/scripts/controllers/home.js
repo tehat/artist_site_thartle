@@ -1,44 +1,54 @@
 /**
  * Created by Thomas on 11/24/15.
  */
-myApp.controller('HomeController', ['$scope', '$http', function($scope, $http){
+myApp.controller('HomeController', ['$scope', '$http', function($scope, $http) {
     console.log("Home Controller");
 
-    $scope.artwork = {};
-    $scope.myInterval = 510000;
+    //$scope.slide = {image: $scope.dataRows.image_url};
+    $scope.dataRows = [];
+    $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
 
-    var slides = $scope.slides = [];
-    console.log(slides);
+    $http.post('/home').then(function (data) {
 
-    //GET artwork
-    $scope.getArt = function(){
-        console.log("is this working 3?");
+        $scope.dataRows = data.data.rows;
+        console.log('object', $scope.dataRows);
 
-        $http.get('/home').then(function(response) {
+    });
 
-                $scope.artwork = response.data;
-
-                console.log( $scope.artwork);
-                console.log(response.data);
-
-        });
-    };
-
-    $scope.addSlide = function() {
-        var newWidth = 800 + slides.length + 1;
-        slides.push({
-            image: '/home' + newWidth + '/800',
-            text: ['Singed Landscape','Body Cast','Potsdam','Elephant Pouch', 'How To Keep Things Living']
-                [slides.length % 5] + ' ' +
-            ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 5]
-        });
-        $scope.getArt();
-    };
-
-    for (var i=0; i<5; i++) {
-        $scope.addSlide();
+    for(var i = 0; i < 5; i++) {
+        $scope.dataRows = [i];
     }
 
 }]);
+
+//myApp.controller('HomeController', ['$scope', function ($scope) {
+//    $scope.myInterval = 6000;
+//    $scope.dataRows = [
+//
+//        {
+//            image_url: "https://dl.dropboxusercontent.com/s/zg7py0ci2zwctj5/singedlandscape1998.jpg?dl=0"
+//        },
+//        {
+//            image_url: "https://dl.dropboxusercontent.com/s/1tn21fz1m9ax9sa/scamperingsled.jpg?dl=0"
+//        },
+//        {
+//            image_url: "https://dl.dropboxusercontent.com/s/3ex025kgqx2gi8z/potsdamsculpture2.jpg?dl=0"
+//        },
+//        {
+//            image_url: "https://dl.dropboxusercontent.com/s/9ebcs2564psrhzp/brainspace.jpg?dl=0"
+//        },
+//        {
+//            image_url: "https://dl.dropboxusercontent.com/s/m9euh3abqffkw71/howtokeepthingsliving.jpg?dl=0"
+//        }
+//
+//    ];
+//}]);
+
+
+
+
+
+
+
 

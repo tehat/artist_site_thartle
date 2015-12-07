@@ -1,9 +1,44 @@
 body{
-    background-color: #666666;
-}
-
-header{
     background-color: #BBBBBB;
 }
 
+header{
+    background-color: #666666;
+}
+footer {
+    background-color: #666666;
+}
+current_nav {
+    background-color:  #2b669a;
+}
+archive_nav {
+    background-color: #2b669a;
+}
 
+#slides_control > div{
+    height: 800px;
+    margin-bottom: 100px;
+}
+.photo{
+    height: 800px;
+    width: 1400px;
+    border-radius: 5px;
+    margin-top: 97px;
+    bottom-margin: 125px;
+
+}
+#slides_control {
+    /*position: absolute;*/
+    width:1400px;
+    height: 800px;
+
+    /*left:50%;*/
+    /*top:20px;*/
+    /*margin-left:20px;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+
+}

@@ -23,7 +23,7 @@ router.get('/', function(req,res){
     //SQL Query > SELECT data from table
     pg.connect(connectionString, function(err, data){
         var query = data.query("SELECT title, date_completed, materials, dimensions, image_url " +
-                "FROM artwork WHERE artwork_id = $1, $2, $3, $4, $5", [artwork]);
+                "FROM artwork WHERE artwork_id = $1, $2, $3, $4, $5" [artwork]);
 
                 console.log(query);
                 console.log(artwork);

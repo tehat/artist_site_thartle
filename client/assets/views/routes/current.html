@@ -1,19 +1,29 @@
-CURRENT
-
-
-<div>
-    <div ng-include="'/assets/views/templates/current_nav.html'"></div>
-    <h1>Current</h1>
-
-    <div class="well" ng-repeat="currentwork in currentCollection">
-
-        <img ng-src="{{currentwork.image_url}}">
-        <p>
-            {{currentwork.title}}<br/>
-            {{currentwork.date_completed}}<br/>
-            {{currentwork.materials}}<br/>
-            {{currentwork.dimensions}}
-        </p>
-
+<div ng-include="'/assets/views/templates/current_nav.html'"></div>
+<h4>Current Work</h4>
+<div class="collapse" id="collapseExample">
+    <div class="well">
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+<!--<div>-->
+    <!--<div ng-include="'/assets/views/templates/current_nav.html'"></div>-->
+    <!--<h1>Current</h1>-->
+    <!--<div class="well" ng-repeat="currentwork in dataRows">-->
+        <!--<img ng-src="{{currentwork.image_url}}">-->
+        <!--<p>-->
+            <!--{{currentwork.title}}<br/>-->
+            <!--{{currentwork.date_completed}}<br/>-->
+            <!--{{currentwork.materials}}<br/>-->
+            <!--{{currentwork.dimensions}}-->
+        <!--</p>-->
+    <!--</div>-->
+<!--</div>-->
