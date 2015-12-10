@@ -1,12 +1,27 @@
 <div ng-include="'/assets/views/templates/current_nav.html'"></div>
-<h4>Current Work</h4>
-<div class="collapse" id="collapseExample">
-    <div class="well">
+
+<div class="container-fluid"  id="current">
+    <h3>Current Work</h3>
+    <div class="well" ng-repeat="slide in dataRows">
+        <img class="photo" ng-src="{{slide.image_url}}">
+        <p>
+        {{slide.title}}<br/>
+        {{slide.date_completed}}<br/>
+        {{slide.materials}}<br/>
+        {{slide.dimensions}}
+        </p>
     </div>
 </div>
 
 
-
+<!--<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">-->
+    <!--Button with data-target-->
+<!--</button>-->
+<!--<div class="collapse" id="collapseExample">-->
+    <!--<div class="well">-->
+        <!--...-->
+    <!--</div>-->
+<!--</div>-->
 
 
 

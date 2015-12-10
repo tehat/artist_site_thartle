@@ -1,15 +1,17 @@
 <h1>Archive</h1>
 <div ng-include="'/assets/views/templates/archive_nav.html'"></div>
-
-<div class="well" ng-repeat="artwork in dataRows">
-    <img ng-src="{{artwork.image_url}}">
-    <p>
-        {{artwork.title}}<br/>
-        {{artwork.date_completed}}<br/>
-        {{artwork.materials}}<br/>
-        {{artwork.dimensions}}
-    </p>
+<div class="container">
+    <div ng-repeat="artwork in dataRows">
+        <img ng-src="{{artwork.image_url}}">
+        <p>
+            {{artwork.title}}<br/>
+            {{artwork.date_completed}}<br/>
+            {{artwork.materials}}<br/>
+            {{artwork.dimensions}}
+        </p>
+    </div>
 </div>
+
 
 
 

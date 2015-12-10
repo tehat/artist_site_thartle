@@ -14,22 +14,30 @@ current_nav {
 archive_nav {
     background-color: #2b669a;
 }
+.container {
+    height: 800px;
+    width: 1200px;
+}
+.form-inline  {
+    height: 40px;
+    width: 800px;
+}
 
 #slides_control > div{
     height: 800px;
     margin-bottom: 100px;
 }
 .photo{
-    height: 800px;
-    width: 1400px;
+    height: 790px;
+    width: 1200px;
     border-radius: 5px;
-    margin-top: 97px;
-    bottom-margin: 125px;
+    margin-top: 20px;
+    bottom-margin: 20px;
 
 }
 #slides_control {
     /*position: absolute;*/
-    width:1400px;
+    width:1200px;
     height: 800px;
 
     /*left:50%;*/
