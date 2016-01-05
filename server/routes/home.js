@@ -8,7 +8,7 @@ var pg = require('pg');
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/artist_site_thartle';
 
-    router.post('/', function(req, res){
+    router.get('/', function(req, res){
 
 
 
@@ -25,6 +25,7 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
 
 
                 });
+            console.log("images", client.query);
         });
 
     });

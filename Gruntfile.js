@@ -66,9 +66,17 @@ module.exports = function(grunt){
                 "dest": 'server/public/vendors/angular-route/'
 
             },
+            angularCarousel: {
+                expand: true,
+                cwd: 'node_modules/angular-carousel',
+                src: [
+                    "angular-carousel.min.js"
+                ],
+                "dest": 'server/public/vendors/angular-carousel'
+            },
             angularBootstrap: {
                 expand: true,
-                    cwd: 'node_modules/angular-bootstrap/',
+                    cwd: 'node_modules/angular-ui-bootstrap/',
                  src: [
                     "ui-bootstrap.min.js"
                  ],
@@ -108,6 +116,8 @@ module.exports = function(grunt){
                     "header.html",
                     "main_nav.html",
                     "footer.html",
+                    "slide.html",
+                    "carousel.html",
                     "archive_nav.html",
                     "current_nav.html"
                 ],
@@ -118,6 +128,14 @@ module.exports = function(grunt){
                 cwd: "client/assets/styles",
                 src: ['style.css'],
                 "dest": "server/public/assets/styles"
+            },
+            fonts: {
+                expand: true,
+                cwd: "node_modules/bootstrap/fonts/",
+                src: ['glyphicons-halflings-regular.woff2',
+                'glyphicons-halflings-regular.woff',
+                'glyphicons-halflings-regular.ttf '],
+                "dest": "server/public/vendors/fonts"
             }
 
         }

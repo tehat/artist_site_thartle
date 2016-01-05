@@ -3,19 +3,6 @@
  */
 var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate']);
 
-
-//myApp.controller('MainController', '$scope', '$route', '$routeParams', '$location',
-//    function($scope, $route, $routeParams, $location){
-//        $scope.$route = $route;
-//        $scope.$location = $location;
-//        $scope.$routeParams = $routeParams;
-//});
-
-
-
-
-
-
 myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
         .when('/home', {

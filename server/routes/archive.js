@@ -12,14 +12,14 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
 router.post('/', function(req, res){
 
 
-    pg.connect(connectionString, function(err, client){
+    pg.connect(connectionString, function(err, client) {
         client.query("SELECT * FROM artwork",
 
             function(err, result){
                 if(err) {
                     console.log("error with inserting data", err);
                     res.send(false);
-                } else{
+                } else {
                     res.send(result);
                 }
             });

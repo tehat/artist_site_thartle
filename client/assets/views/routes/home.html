@@ -1,12 +1,11 @@
-
-
-<div id="slides_control">
-    <div>
-        <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-            <uib-slide  ng-repeat="slide in dataRows" active="slide.active">
-                <img class="photo" ng-src="{{slide.image_url}}">
-            </uib-slide>
-        </uib-carousel>
-    </div>
+<div ng-controller="HomeController" id="portfolio">
+    <uib-carousel interval="myInterval" no-wrap="noWrapSlides" template-url="/assets/views/templates/carousel.html">
+        <uib-slide ng-repeat="slide in slides" active="slide.active" template-url="/assets/views/templates/slide.html">
+            <img ng-src="{{slide.image_url}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h4>Slide {{$index}}</h4>
+                <p>{{slide.title}}</br>{{slide.date_completed}}</br>{{slide.dimensions}}</br>{{slide.materials}}</p>
+            </div>
+        </uib-slide>
+    </uib-carousel>
 </div>
-
