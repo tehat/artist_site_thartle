@@ -119,6 +119,7 @@ module.exports = function(grunt){
                     "slide.html",
                     "carousel.html",
                     "archive_nav.html",
+                    "dropdown.html",
                     "current_nav.html"
                 ],
                 "dest": "server/public/assets/views/templates/"

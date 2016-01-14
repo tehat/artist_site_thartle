@@ -1,7 +1,7 @@
 <h1>Archive</h1>
 <div ng-include="'/assets/views/templates/archive_nav.html'"></div>
 <div class="container">
-    <div ng-repeat="artwork in dataRows">
+    <div ng-repeat="artwork in slides">
         <img ng-src="{{artwork.image_url}}">
         <p>
             {{artwork.title}}<br/>
