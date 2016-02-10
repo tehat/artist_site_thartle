@@ -25,6 +25,15 @@
     "grunt-contrib-uglify": "^0.11.0",
     "node": "0.0.0",
     "path": "^0.12.7",
-    "pg": "^4.4.3"
-  }
+    "pg": "^4.4.3",
+    "pkg": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tehat/artist_site_thartle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tehat/artist_site_thartle/issues"
+  },
+  "homepage": "https://github.com/tehat/artist_site_thartle#readme"
 }

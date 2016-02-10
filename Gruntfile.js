@@ -103,7 +103,6 @@ module.exports = function(grunt){
                 src: [
                     "archive.html",
                     "contact.html",
-                    "current.html",
                     "home.html",
                     "mailing.html"
                 ],
@@ -118,9 +117,7 @@ module.exports = function(grunt){
                     "footer.html",
                     "slide.html",
                     "carousel.html",
-                    "archive_nav.html",
-                    "dropdown.html",
-                    "current_nav.html"
+                    "dropdown.html"
                 ],
                 "dest": "server/public/assets/views/templates/"
             },

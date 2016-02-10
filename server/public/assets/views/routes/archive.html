@@ -1,16 +1,76 @@
-<h1>Archive</h1>
-<div ng-include="'/assets/views/templates/archive_nav.html'"></div>
-<div class="container">
-    <div ng-repeat="artwork in slides">
-        <img ng-src="{{artwork.image_url}}">
-        <p>
-            {{artwork.title}}<br/>
-            {{artwork.date_completed}}<br/>
-            {{artwork.materials}}<br/>
-            {{artwork.dimensions}}
-        </p>
-    </div>
+
+
+
+
+<div ng-controller="ArchiveController">
+<!--<nav ng-include="'/assets/views/templates/archive_nav.html'"></nav>-->
+
+
+    <nav class="nav nav-pill nav-justified">
+
+
+        <!--<div  ng-controller="SculptureController">-->
+    <span uib-dropdown on-toggle="toggled(open)" href="/assets/controllers/sculpture.js">
+      <a href id="simple-dropdown" uib-dropdown-toggle>SCULPTURE</a>
+      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="artwork in sculpture">
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+          </li>
+      </ul>
+    </span>
+        <!--</div>-->
+        <!--<div ng-controller="PaintingsController">-->
+        <span uib-dropdown on-toggle="toggled(open)" href="/assets/controllers/paintings.js">
+      <a href id="simple-dropdown" uib-dropdown-toggle>PAINTINGS</a>
+      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="artwork in paintings">
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+          </li>
+      </ul>
+    </span>
+        <!--</div>-->
+        <!--<div ng-controller="WorksOnPaperController">-->
+    <span uib-dropdown on-toggle="toggled(open)" href="/assets/controllers/worksonpaper.js">
+      <a href id="simple-dropdown" uib-dropdown-toggle>WORKS ON PAPER</a>
+      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="artwork in worksonpaper">
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+          </li>
+      </ul>
+    </span>
+        <!--</div>-->
+        <!--<div ng-controller="InstallationsController">-->
+    <span uib-dropdown on-toggle="toggled(open)" href="/assets/controllers/installations.js">
+      <a href id="simple-dropdown" uib-dropdown-toggle>INSTALLATIONS</a>
+      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="artwork in installations">
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+          </li>
+      </ul>
+    </span>
+        <!--</div>-->
+        <!--<div ng-controller="FurnitureController">-->
+    <span uib-dropdown on-toggle="toggled(open)" href="/assets/controllers/furniture.js">
+      <a href id="simple-dropdown" uib-dropdown-toggle>FURNITURE</a>
+      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li ng-repeat="artwork in furniture">
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+          </li>
+      </ul>
+    </span>
+        <!--</div>-->
+
+
+
+    </nav>
+
+
+
+
+
+
 </div>
+
 
 
 

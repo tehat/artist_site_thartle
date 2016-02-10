@@ -13,7 +13,7 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
 
 
         pg.connect(connectionString, function(err, client){
-            client.query("SELECT * FROM slideshow",
+            client.query("SELECT * FROM carousel",
 
                 function(err, result){
                     if(err) {

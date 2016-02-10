@@ -9,10 +9,6 @@ myApp.config(['$routeProvider', function($routeProvider){
             templateUrl: "assets/views/routes/home.html",
             controller: "HomeController"
         })
-        .when('/current', {
-            templateUrl: "/assets/views/routes/current.html",
-            controller: "CurrentController"
-        })
         .when('/archive', {
             templateUrl: "/assets/views/routes/archive.html",
             controller: "ArchiveController"
@@ -24,6 +20,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         .when('/contact', {
             templateUrl: "/assets/views/routes/contact.html",
             controller: "ContactController"
+        })
+        .when('/contact', {
+            templateUrl: "/assets/views/routes/contact.html",
+            controller: "DropdownCtrl"
         })
         .otherwise({
             redirectTo: 'current'

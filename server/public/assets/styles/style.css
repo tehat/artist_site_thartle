@@ -1,22 +1,25 @@
 body{
-    background-color: #BBBBBB;
+    background-color: #e4c3ad;
 }
 
 header{
-    background-color: #666666;
+    background-color: #9ea3b0;
 }
 footer {
-    background-color: #666666;
-}
-current_nav {
-    background-color:  #2b669a;
+    background-color: #9ea3b0;
 }
 archive_nav {
-    background-color: #2b669a;
+    color:  #0d1f2d;
+    background-color: #38bae6;
+}
+main_nav {
+    color: #fae1df;
+
 }
 .container {
     height: 800px;
     width: 1200px;
+    padding: 15px 15px 25px 15px;
 }
 .form-inline  {
     height: 40px;

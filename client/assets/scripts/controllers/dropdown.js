@@ -2,11 +2,7 @@
  * Created by Thomas on 1/6/16.
  */
 myApp.controller('DropdownCtrl', ['$scope', '$http', '$log', function ($scope, $http, $log) {
-    $scope.items = [
-        'scupture 1',
-        'sculpture 2',
-        'sculpture 3'
-    ];
+    $scope.items = [];
 
     $scope.status = {
         isopen: false
