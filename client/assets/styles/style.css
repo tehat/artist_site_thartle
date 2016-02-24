@@ -1,5 +1,5 @@
 body{
-    background-color: #e4c3ad;
+    background-color: #546a7b;
 }
 
 header{
@@ -17,8 +17,8 @@ main_nav {
 
 }
 .container {
-    height: 800px;
-    width: 1200px;
+    height: 100%;
+    width: 100%;
     padding: 15px 15px 25px 15px;
 }
 .form-inline  {

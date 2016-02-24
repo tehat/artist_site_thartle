@@ -36,7 +36,7 @@ router.get('/sculpture', function(req, res){
                     res.send(result);
                 }
             });
-        console.log("sculpture object", client.query);
+        console.log("sculpture object: ", client.query);
     });
 });
 

@@ -21,11 +21,7 @@ myApp.config(['$routeProvider', function($routeProvider){
             templateUrl: "/assets/views/routes/contact.html",
             controller: "ContactController"
         })
-        .when('/contact', {
-            templateUrl: "/assets/views/routes/contact.html",
-            controller: "DropdownCtrl"
-        })
         .otherwise({
-            redirectTo: 'current'
+            redirectTo: '/home'
         });
 }]);

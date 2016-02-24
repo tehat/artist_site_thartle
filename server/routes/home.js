@@ -10,8 +10,6 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
 
     router.get('/', function(req, res){
 
-
-
         pg.connect(connectionString, function(err, client){
             client.query("SELECT * FROM carousel",
 
@@ -22,12 +20,9 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/ar
                     } else{
                         res.send(result);
                     }
-
-
                 });
             console.log("images", client.query);
         });
-
     });
 
 module.exports = router;

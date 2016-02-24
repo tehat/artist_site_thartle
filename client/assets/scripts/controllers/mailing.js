@@ -10,7 +10,7 @@ myApp.controller("MailingController", ['$scope','$http', function($scope, $http)
     $scope.clickButton = function(request){
 
         $http.post('/mailing', request).then(function(){
-            console.log("button click",request.body);
+            console.log("button click: ",request.body);
         });
         $scope.form = {};
     };

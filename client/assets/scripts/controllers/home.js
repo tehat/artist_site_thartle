@@ -7,22 +7,13 @@ myApp.controller('HomeController', ['$scope', '$http', function($scope, $http) {
     $scope.myInterval = 6000;
     $scope.noWrapSlides = false;
     $scope.slides = [];
+    console.log('object', $scope.slides);
 
     $http.get('/home').then(function (data) {
 
         $scope.slides = data.data.rows;
-        console.log('object', $scope.slides);
+        console.log('carousel slides object: ', $scope.slides);
 
     });
 
 }]);
-
-
-
-
-
-
-
-
-
-
