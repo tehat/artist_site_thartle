@@ -1,10 +1,6 @@
 
-<div>
-
-
-    <nav class="nav nav-pill nav-justified">
-
-
+<div class="nav nav-pill nav-justified">
+    <nav>
 
     <span uib-dropdown on-toggle="toggled(open)">
       <a href id="simple-dropdown" uib-dropdown-toggle>SCULPTURE</a>
@@ -12,10 +8,19 @@
           <li ng-repeat="artwork in sculpture">
               <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
           </li>
+          <li class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-dropdown">
+              <img ng-src="{{artwork.archive_url}}" style="margin:auto;">
+              <a role="menuitem" ng-click="select(item)">
+                  {{artwork.title}}&nbsp&nbsp
+                  {{artwork.date_completed}}&nbsp&nbsp
+                  {{artwork.materials}}&nbsp&nbsp
+                  {{artwork.dimensions}}
+              </a>
+          </li>
       </ul>
     </span>
 
-        <span uib-dropdown on-toggle="toggled(open)">
+    <span uib-dropdown on-toggle="toggled(open)">
       <a href id="simple-dropdown" uib-dropdown-toggle>PAINTINGS</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in paintings">
@@ -54,6 +59,8 @@
 
     </nav>
 </div>
+
+
 
 
 

@@ -6,8 +6,8 @@ myApp.controller('ArchiveController', ['$scope', '$http', function($scope, $http
 
     //$scope.slide = {image: $scope.dataRows.image_url};
     //var slides = $scope.dataRows = [];
-    $scope.myInterval = 6000;
-    $scope.noWrapSlides = false;
+    //$scope.myInterval = 6000;
+    //$scope.noWrapSlides = false;
     $scope.slides = [];
     $scope.sculpture = [];
     $scope.paintings = [];
@@ -18,10 +18,9 @@ myApp.controller('ArchiveController', ['$scope', '$http', function($scope, $http
     $http.get('/').then(function (data) {
 
         $scope.slides = data.data.rows;
-        console.log('object', $scope.slides);
+        console.log('object: ', $scope.slides);
 
     });
-
 
     $http.get('/archive/sculpture').then(function (data) {
 
@@ -62,4 +61,9 @@ myApp.controller('ArchiveController', ['$scope', '$http', function($scope, $http
 
     });
 
+
 }]);
+
+
+
+

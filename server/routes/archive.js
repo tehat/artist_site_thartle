@@ -42,7 +42,7 @@ router.get('/sculpture', function(req, res){
 
 router.get('/paintings', function(req, res){
     pg.connect(connectionString, function(err, client){
-        client.query("SELECT * FROM archive  WHERE category_type LIKE 'painting'",
+        client.query("SELECT * FROM archive  WHERE category_type LIKE 'canvas'",
 
             function(err, result){
                 if(err) {
