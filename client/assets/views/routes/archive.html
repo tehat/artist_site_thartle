@@ -3,16 +3,16 @@
     <nav>
 
     <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>SCULPTURE</a>
+      <a href id="simple-dropdown-sculpture" uib-dropdown-toggle>SCULPTURE</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in sculpture">
               <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
           </li>
           <li class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-dropdown">
-              <img ng-src="{{artwork.archive_url}}" style="margin:auto;">
+              <img ng-src="{{artwork.url}}" style="margin:auto;">
               <a role="menuitem" ng-click="select(item)">
                   {{artwork.title}}&nbsp&nbsp
-                  {{artwork.date_completed}}&nbsp&nbsp
+                  {{artwork.date}}&nbsp&nbsp
                   {{artwork.materials}}&nbsp&nbsp
                   {{artwork.dimensions}}
               </a>
@@ -21,37 +21,37 @@
     </span>
 
     <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>PAINTINGS</a>
+      <a href id="simple-dropdown-paintings" uib-dropdown-toggle>PAINTINGS</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in paintings">
-              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date}}</a>
           </li>
       </ul>
     </span>
 
     <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>WORKS ON PAPER</a>
+      <a href id="simple-dropdown-paper" uib-dropdown-toggle>WORKS ON PAPER</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in worksonpaper">
-              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date}}</a>
           </li>
       </ul>
     </span>
 
     <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>INSTALLATIONS</a>
+      <a href id="simple-dropdown-installations" uib-dropdown-toggle>INSTALLATIONS</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in installations">
-              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date}}</a>
           </li>
       </ul>
     </span>
 
     <span uib-dropdown on-toggle="toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>FURNITURE</a>
+      <a href id="simple-dropdown-furniture" uib-dropdown-toggle>FURNITURE</a>
       <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
           <li ng-repeat="artwork in furniture">
-              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date_completed}}</a>
+              <a href>{{artwork.title}}&nbsp&nbsp{{artwork.date}}</a>
           </li>
       </ul>
     </span>
